@@ -4,19 +4,26 @@ import { TwitProps } from "../interfaces/TwitInteface";
 
 const TwitHeader = ({ userName, tagName, datePost }: TwitProps) => {
   return (
-    <View style={TwitHeaderStyle.container}>
-      <Text>{userName}</Text>
-      <Text>{tagName}</Text>
-      <Text>{datePost}</Text>
+    <View style={style.container}>
+      <Text style={[style.userNameText, { paddingEnd: 4 }]}>{userName}</Text>
+      <Text style={[style.tagNameText, { paddingRight: 8 }]}>
+        {tagName} • {datePost}
+      </Text>
     </View>
   );
 };
-const TwitHeaderStyle = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flexDirection: "row",
-    justifyContent: "space-around",
-    alignContent: "space-around",
-    alignItems: "flex-start",
+    fontSize: 14,
+  },
+  userNameText: {
+    fontWeight: "700",
+  },
+  tagNameText: {
+    color: "#71767b",
+    fontSize: 14,
+    lineHeight: 19,
   },
 });
 export default TwitHeader;

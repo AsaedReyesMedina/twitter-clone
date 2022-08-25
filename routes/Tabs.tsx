@@ -12,10 +12,7 @@ export default function App() {
         screenOptions={{ tabBarShowLabel: false }}
         initialRouteName="Home"
       >
-        <Tab.Screen
-          name="Home"
-          component={Home}
-        />
+        <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Search" component={Search} />
         <Tab.Screen name="Notifications" component={Notifications} />
         <Tab.Screen name="Messages" component={Messages} />
